@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(7, 129, 137);
+    height: 80px;
+    margin-top: 0;
+}
+
+
+.nav > li:hover{
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.nav > li a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 18px;
+}

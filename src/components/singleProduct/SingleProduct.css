@@ -1,0 +1,30 @@
+
+
+.products{
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.productDesc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.add{
+
+    align-self: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+
+}
+.add:hover{
+    background:rgb(8, 152, 162) ;
+    transition: all 0.4s ease-in-out;
+}

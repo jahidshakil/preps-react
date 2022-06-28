@@ -1,36 +1,29 @@
-import './App.css';
-import axios from 'axios'
 import { useState } from 'react';
+import { Route,BrowserRouter,Routes  } from 'react-router-dom';
+import './App.css';
+import API from './components/Api/API';
+import Cart from './components/cart/Cart';
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+
 
 function App() {
-  const [news, setNews] = useState([]);
-  const getApi = () => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=6004b8fcb1604003b4ead57854e8d2c2").then((res) => {
-    setNews(res.data.articles)
-      console.log(res);
-  })
-  }
-  return (
-    <div className="App">
-      <button className='btn btn-primary' onClick={getApi}>Click For API</button>
-      <div>
-        {
-          news.map((value) => {
-            return (
-              <div>
-                <div className="text-primary">
-                {value.author}
-                </div>
-                <div>
-                  {value.title}
-                </div>
-              </div>
 
-            )
-          })
-        }
-      </div>
-    </div>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Header/>
+      <div className="App">
+        
+          <Route path='/' element={<Home/>} />
+          <Route path='/cart' element={<Cart/>} />
+          
+          
+        </div>
+        </Routes>
+      </BrowserRouter>
+   
+    
   );
 }
 
